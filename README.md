@@ -1,10 +1,5 @@
 # GNSS-AntiSpoof — Real-Time Standalone Positioning with Subset-Spoofing Detection & Mitigation
 
-> Intro to Navigation (2026b) — Course Project, **Option 1**
-> *"Consider Ex0, design a real-time navigation (Android) app that computes the standalone
-> positioning via raw measurements — allowing detection and overcoming spoofing of a subset
-> of the navigation satellites."*
-
 This project extends **Ex0** (offline RINEX → KML/CSV positioning) into a **real-time engine**
 that:
 
