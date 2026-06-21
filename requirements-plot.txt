@@ -1,0 +1,3 @@
+# Optional: only needed for apps/evaluate.py PNG plots. The core pipeline and
+# all CSV/KML output work without these.
+matplotlib>=3.5

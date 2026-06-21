@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Recorded data and downloaded ephemeris (provide your own logs here)
+/data/raw/*
+/data/brdc/*
+!/data/raw/.gitkeep
+!/data/brdc/.gitkeep
+
+# Generated tracks, KML, CSV, plots
+/outputs/*
+!/outputs/.gitkeep
+
+# Android build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.iml
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

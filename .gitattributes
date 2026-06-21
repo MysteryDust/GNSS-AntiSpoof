@@ -1,0 +1,8 @@
+# Normalize line endings: store text as LF in the repo on every platform.
+* text=auto eol=lf
+
+# Treat the sample binaries/data as text where helpful, binary where not.
+*.png binary
+*.jpg binary
+*.rnx text eol=lf
+*.csv text eol=lf

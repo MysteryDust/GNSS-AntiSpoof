@@ -1,0 +1,8 @@
+# Core library — pure standard-library Python (3.10+). No third-party deps.
+#
+# The positioning engine, RANSAC/RAIM/AGC anti-spoofing layer, the GnssLogger /
+# RINEX parsers, the spoofing simulator and the real-time engine all run on a
+# clean Python install with nothing to pip-install.
+#
+# Optional extras (only for the evaluation plots in apps/evaluate.py):
+#   pip install -r requirements-plot.txt
