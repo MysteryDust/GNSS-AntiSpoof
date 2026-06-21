@@ -34,6 +34,12 @@ ground truth, *during* the attack:
 the prior-gate + dead-reckoning fallback protects the position instead. This limitation is
 fundamental to consensus methods and is handled explicitly (see *Design*).
 
+![Subset spoofing defeated: the unprotected fix is dragged ~370 m off route during the attack while the mitigated fix stays on the true route; horizontal error spikes to ~370 m unprotected vs <1 m protected.](docs/figures/attack.png)
+
+*The unprotected (red) position is dragged ~370 m off the true route during the attack while the
+mitigated (green) position stays on it — error stays under 1 m. Regenerate with
+`python apps/evaluate.py attack`.*
+
 Reproduce:
 
 ```bash
@@ -52,6 +58,12 @@ scored against the phone's own NMEA solution as reference:
 | Suburban, ~5 min | 280 | **median 5.0 m, RMS 7.4 m, P95 14 m** | 0 SPOOFED (169 CLEAN / 111 SUSPECT) |
 | Urban, ~44 min | 2628 | median 9.3 m, P95 15 m | 0.1 % SPOOFED |
 | Urban, ~43 min | 2590 | median 6.1 m, P95 10 m | 0.8 % SPOOFED |
+
+![Standalone track vs device: the engine's standalone GNSS track overlays the phone's NMEA solution around a ~400 m loop; the horizontal error histogram is centred at a 5 m median.](docs/figures/real_track.png)
+
+*On a real recording, the standalone track (green) overlays the device's own NMEA (grey) around the
+loop, with a 5 m median error. Regenerate with `python apps/evaluate.py real --gnsslog <log>.txt
+--nav data/brdc/<brdc>.rnx --nmea <log>.nmea`.*
 
 The standalone position (computed purely from raw pseudoranges, never the OS location)
 tracks the device's own fix to a few metres — and on clean data the detector raises **no false
